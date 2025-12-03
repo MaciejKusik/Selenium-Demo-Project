@@ -8,7 +8,7 @@ The tests are implemented using Java 17, Selenium WebDriver, and TestNG. Maven i
 
 Project Structure
 
-The project is organized with tests in src/test/java/com.example.saucedemo.tests. Each test class extends BaseTest, which contains setup and teardown methods for the WebDriver. The pom.xml file contains Maven dependencies, including Selenium, TestNG, WebDriverManager and Allure. The TestNG suite configuration is defined in testng.xml. Allure is configured via the Maven plugin and TestNG listener, generating detailed reports for each test run.
+The project is organized with tests in src/test/java/com.example.saucedemo.tests. Of course Page Object Models are included in src/main/java/com.example.saucedemo.pages. Each test class extends BaseTest, which contains setup and teardown methods for the WebDriver. The pom.xml file contains Maven dependencies, including Selenium, TestNG, WebDriverManager and Allure. The TestNG suite configuration is defined in testng.xml. Allure is configured via the Maven plugin and TestNG listener, generating detailed reports for each test run.
 
 CI with Jenkins
 
