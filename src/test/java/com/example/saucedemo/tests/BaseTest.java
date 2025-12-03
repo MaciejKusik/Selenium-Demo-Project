@@ -7,7 +7,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
 
@@ -35,23 +37,23 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() {
-        if (driver == null) {
-            WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
 
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--incognito");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--incognito");
 
-            driver = new ChromeDriver(options);
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-            driver.get("https://www.saucedemo.com");
-        }
+        driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+        driver.get("https://www.saucedemo.com");
     }
+
     @AfterMethod
-        public void tearDown () {
-            if (driver != null) {
-                driver.quit();
-                driver = null;
-            }
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
         }
     }
+}
