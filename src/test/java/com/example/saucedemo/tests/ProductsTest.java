@@ -2,13 +2,10 @@ package com.example.saucedemo.tests;
 
 import com.example.saucedemo.pages.LoginPage;
 import com.example.saucedemo.pages.ProductsPage;
-import io.qameta.allure.testng.AllureTestNg;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import java.util.List;
 
-@Listeners({AllureTestNg.class})
 public class ProductsTest extends BaseTest {
 
     @Test

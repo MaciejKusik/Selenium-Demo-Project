@@ -1,12 +1,9 @@
 package com.example.saucedemo.tests;
 
 import com.example.saucedemo.pages.LoginPage;
-import io.qameta.allure.testng.AllureTestNg;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners({AllureTestNg.class})
 public class LoginTest extends BaseTest {
 
     @Test

@@ -1,13 +1,10 @@
 package com.example.saucedemo.tests;
 
 import com.example.saucedemo.pages.CheckoutPage;
-import io.qameta.allure.testng.AllureTestNg;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import java.util.List;
 
-@Listeners({AllureTestNg.class})
 public class CheckoutTest extends BaseTest {
     @Test
     public void FillDataAndFinishTransaction() {
